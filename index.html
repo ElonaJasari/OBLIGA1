@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kino</title>
+  <style>
+    label {
+      display: inline-block;
+      width: 70px;
+      text-align: right;
+      margin-right: 10px;
+    }
+    input {
+      display: inline-block;
+      width: 150px;
+      vertical-align: top;
+      margin-bottom: 10px;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+<h1>Bestilling av kinobilletter</h1>
+<p>Velg film: <select id="film" onchange="velg();">
+  <option value="" selected>Velg film her</option>
+  <option value="Never say never">Never say never</option>
+  <option value="My World">My World</option>
+  <option value="Our World">Our World</option>
+</select></p>
+
+
+<p>Antall <input
+        type="text"
+        id="antall"
+        min="1"
+        style="width: 40px"
+        onchange="selectAntall()"></p>
+
+<label for="fornavn">Fornavn</label> <input type="text" id="fornavn">
+
+<br>
+
+<label for="etternavn">Etternavn</label> <input type="text" id="etternavn">
+
+<br>
+
+<label for="telefonnr">Telefonnr</label> <input type="tel" id="telefonnr">
+
+<br>
+
+<label for="epost">Epost</label> <input type="email" id="epost">
+
+<br>
+<tr><td><button onclick="registrer()">Kjøp billett</button></td></tr>
+
+<h2>Alle billetter</h2>
+
+<div id="register"></div>
+
+<br>
+
+<button onclick="slettBilletterKnapp()">Slett alle billetter</button>
+
+
+</body>
+</html>
